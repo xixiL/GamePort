@@ -280,14 +280,22 @@ body {
 	margin: 3px 1%;
 }
 .link-3{
-	display: block;
+	/* 固定按钮容器尺寸，允许最多两行显示并省略，避免撑高与重叠 */
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	word-break: break-word;
+	/* 保留原有外观 */
 	background: rgba(0,0,0,.45);
 	color: #ffa500;
 	font-size: 14px;
 	font-weight: bold;
 	text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 	text-align: center;
-	line-height: 35px;
+	line-height: 17px;
 	padding: 4px 0;
 	border-radius: 2px;
 	transition: all 0.2s;
